@@ -16,6 +16,11 @@
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Kernel (prebuilt; boot.img gets the DTBH dt.img injected by
+# device/samsung/universal8895-common/tools/mkbootimg_dtbh.py)
+PRODUCT_COPY_FILES += \
+    device/samsung/dream2lte-kernel/Image:kernel
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml
