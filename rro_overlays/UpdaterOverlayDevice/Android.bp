@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "UpdaterOverlayDeviceDream2lte",
+    product_specific: true,
+}

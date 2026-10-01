@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "DocumentUIOverlayDream2lte",
+    theme: "DocumentUIOverlayDream2lte",
+    sdk_version: "current",
+    product_specific: true
+}
