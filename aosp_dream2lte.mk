@@ -28,3 +28,10 @@ PRODUCT_NAME := aosp_dream2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G955F
 PRODUCT_MANUFACTURER := samsung
+
+# The 4.4 kernel has no userfaultfd, so ART runs the concurrent copying GC.
+# Without this the build compiles for the userfaultfd GC and ART rejects all
+# prebuilt odex files ("Read barrier state mismatch").
+# Set here: a value in an inherited makefile loses to the default from
+# default_art_config.mk.
+PRODUCT_ENABLE_UFFD_GC := false
